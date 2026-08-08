@@ -4,11 +4,11 @@ import Footer from "./components/layout/Footer";
 
 const navigation = ["Home", "Service", "Feature", "Product", "Testimonial", "FAQ"];
 
-function NexcentMark() {
+function NexcentMark({ className = "h-6 w-[34px] shrink-0" }: { className?: string }) {
   return (
     <svg
       aria-hidden="true"
-      className="h-6 w-[34px] shrink-0"
+      className={className}
       viewBox="0 0 34 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -26,53 +26,72 @@ function NexcentMark() {
 
 function HeroIllustration() {
   return (
-    <svg aria-label="Developer working beside a computer" className="h-auto w-full max-w-[420px]" viewBox="0 0 440 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="356" cy="363" rx="62" ry="30" fill="#D9DADB" />
-      <path d="M246 370c-14 0-26 5-26 11h52c0-6-12-11-26-11Zm0-10c-9 0-17 3-17 8h34c0-5-8-8-17-8Z" fill="#D9DADB" />
-      <path d="M231 345h30v29h-30z" fill="#D9DADB" /><path d="M214 353h64v11h-64z" fill="#D9DADB" />
-      <path d="M105 299 228 225l15 10-124 75-14-11Z" fill="#DBDDDF" />
-      <path d="M102 143 294 33v19L102 165v-22Z" fill="#4CAF4F" />
-      <path d="m104 143 190-110v10L104 155v-12Z" fill="#62C466" />
-      <circle cx="284" cy="45" r="3" fill="white" /><circle cx="275" cy="50" r="3" fill="white" />
-      <path d="M74 194c0-7 4-13 10-17l197-114c8-5 18 1 18 10v132c0 7-4 14-10 17L98 334c-10 6-24-1-24-13V194Z" fill="#455A64" />
-      <path d="M82 198c0-5 3-9 7-12L282 75c4-2 9 1 9 6v119c0 6-3 10-8 13L91 324c-4 2-9-1-9-6V198Z" fill="#263238" />
-      <path d="M91 199 282 88v108L91 307V199Z" fill="#E8F5E9" />
-      <path d="M91 199 282 88v13L91 212v-13Z" fill="#4CAF4F" />
-      <path d="M104 219h64v62h-64z" fill="#C8E6C9" /><path d="M104 219h34v62h-34z" fill="#4CAF4F" />
-      <text x="109" y="241" fill="white" fontSize="9" fontWeight="700">CSS</text><text x="109" y="257" fill="white" fontSize="9" fontWeight="700">HTML</text><text x="109" y="274" fill="white" fontSize="9" fontWeight="700">C++</text>
-      <path d="m112 293 8-10 8 10m-16 0 8 10 8-10" stroke="white" strokeWidth="3" />
-      <path d="M195 137h9v9h-9zm18-11h8v8h-8zm19 18h9v9h-9zm-37 25h9v9h-9zm21 18h8v8h-8zm22-15h10v10h-10z" fill="#B9E3BB" />
-      <path d="M175 156h21v7h-21zm42-25h25v7h-25zm-7 31h22v7h-22zm34 20h21v7h-21zm-48 13h17v7h-17z" fill="#73C878" />
-      <circle cx="150" cy="132" r="7" fill="#4CAF4F" /><path d="m239 117 15-9-7 16-8-7Z" fill="#455A64" />
-      <path d="M214 335c0 9 7 16 16 16h15c9 0 16-7 16-16v-14h-47v14Z" fill="#37474F" /><path d="M196 350h83l-27 18h-30l-26-18Z" fill="#455A64" />
-      <path d="M282 96 383 38v135l-101 58V96Z" fill="#4CAF4F" /><path d="M288 102 377 51v113l-89 51V102Z" fill="#37474F" />
-      <path d="m299 122 14-8m-14 16 54-31m-54 39 64-37m-64 45 48-28m-48 36 68-39m-68 47 52-30m-52 38 39-22m-39 30 65-38m-65 46 45-26" stroke="#9CDB9F" strokeWidth="2" />
-      <path d="m311 119 20-12m-5 47 31-18m-39-9 17-10m-28 46 23-13" stroke="#4CAF4F" strokeWidth="2" />
-      <path d="M330 138c-3-10 2-19 12-23 9-4 19 1 22 10l8 26-40 15-2-28Z" fill="#263238" />
-      <circle cx="351" cy="119" r="15" fill="#C8E6C9" /><path d="M337 117c1-13 23-18 29-4l-2 7-8-4-5 7-14-6Z" fill="#263238" />
-      <path d="M338 133c6 7 17 8 25 3l8 27-30 13-3-43Z" fill="#C8E6C9" />
-      <path d="m372 150 15 38-24 10-12-36 21-12Z" fill="#4CAF4F" /><path d="m362 170 19 10-15 12-15-8 11-14Z" fill="#8CD390" />
-      <path d="m340 175 12 84-22 59h-16l14-63-12-71 24-9Z" fill="#455A64" /><path d="m363 194 16 70 5 46h-15l-11-47-18-57 23-12Z" fill="#37474F" />
-      <path d="M313 313c6-6 18-4 20 4l-4 9h-22c-3-5 1-10 6-13Zm56-7c8-4 17 2 16 10l-5 7h-22c0-6 4-14 11-17Z" fill="#263238" />
-      <path d="m314 181-35-16 11 33 37 18 13-22-26-13Z" fill="#4CAF4F" /><path d="m287 172-11-8-11-19 8-5 14 19 8 7-8 6Z" fill="#C8E6C9" />
-      <path d="m314 182 25 10-13 29-30-14 18-25Z" fill="#4CAF4F" /><circle cx="310" cy="198" r="3" fill="#455A64" />
-      <path d="M405 91 423 80v21l-18 11v-21Z" fill="#455A64" /><path d="m410 97 6-4m-6 10 7-5" stroke="white" strokeWidth="2" />
-      <path d="m397 91 10-6 7 4-10 6-7-4Z" fill="#37474F" />
+    <svg aria-label="Developer working beside a computer" className="h-auto w-full max-w-[520px]" viewBox="0 0 540 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="28" y="68" width="390" height="248" rx="24" fill="#f3f8f6" stroke="#d7e7df" strokeWidth="2" />
+      <rect x="28" y="68" width="390" height="40" rx="18" fill="#4caf4f" />
+      <circle cx="52" cy="88" r="4" fill="#d1f7d3" />
+      <circle cx="68" cy="88" r="4" fill="#d1f7d3" />
+      <circle cx="84" cy="88" r="4" fill="#d1f7d3" />
+      <path d="M48 132h90" stroke="#ffffff" strokeWidth="4" strokeLinecap="round" opacity="0.85" />
+      <path d="M48 160h132" stroke="#ffffff" strokeWidth="4" strokeLinecap="round" opacity="0.7" />
+      <rect x="48" y="190" width="108" height="120" rx="18" fill="#ffffff" opacity="0.9" />
+      <rect x="48" y="190" width="108" height="28" rx="10" fill="#4caf4f" />
+      <path d="M72 226h60" stroke="#1f2937" strokeWidth="4" strokeLinecap="round" />
+      <path d="M72 252h52" stroke="#1f2937" strokeWidth="4" strokeLinecap="round" />
+      <path d="M72 278h48" stroke="#1f2937" strokeWidth="4" strokeLinecap="round" />
+      <rect x="202" y="132" width="150" height="172" rx="20" fill="#1f2937" />
+      <rect x="212" y="142" width="130" height="144" rx="14" fill="#0f1720" />
+      <path d="M232 162h92" stroke="#7dd3fc" strokeWidth="4" strokeLinecap="round" />
+      <path d="M232 188h68" stroke="#7dd3fc" strokeWidth="4" strokeLinecap="round" />
+      <path d="M232 214h56" stroke="#7dd3fc" strokeWidth="4" strokeLinecap="round" />
+      <path d="M232 240h86" stroke="#7dd3fc" strokeWidth="4" strokeLinecap="round" />
+      <path d="M232 266h72" stroke="#7dd3fc" strokeWidth="4" strokeLinecap="round" />
+      <path d="M232 292h86" stroke="#7dd3fc" strokeWidth="4" strokeLinecap="round" />
+      <path d="M232 318h48" stroke="#7dd3fc" strokeWidth="4" strokeLinecap="round" />
+      <path d="M420 102h68v32h-68z" fill="#4caf4f" rx="12" />
+      <path d="M428 112h52v12h-52z" fill="#ffffff" />
+      <path d="M428 132h40v8h-40z" fill="#ffffff" opacity="0.75" />
+      <rect x="60" y="330" width="148" height="24" rx="12" fill="#d9dadb" />
+      <path d="M94 362h82" stroke="#cfd8dc" strokeWidth="10" strokeLinecap="round" />
+      <path d="M416 68h48" stroke="#1f2937" strokeWidth="10" strokeLinecap="round" />
+      <path d="M456 68h24" stroke="#1f2937" strokeWidth="10" strokeLinecap="round" />
+      <path d="M380 116c-5 0-8-2-8-8V74c0-6 3-8 8-8h120c5 0 8 2 8 8v34c0 6-3 8-8 8H380Z" fill="#4caf4f" opacity="0.95" />
+      <path d="M402 102c16-14 34-22 58-24 28-2 54 7 68 20" stroke="#ffffff" strokeWidth="4" strokeLinecap="round" />
+      <path d="M336 318c0 22-10 34-28 34s-28-12-28-34 10-34 28-34 28 12 28 34Z" fill="#d9dadb" />
+      <path d="M295 234c0-24 17-44 36-44h10v30h30v86h-60c-18 0-16-36-16-36Z" fill="#4caf4f" />
+      <path d="M329 160c6 0 14 5 16 12l16 77-6 4-20-69c-2-7-6-24-6-24Z" fill="#1f2937" />
+      <path d="M330 160a11 11 0 1 1 0 22 11 11 0 0 1 0-22Z" fill="#f8fafc" />
+      <path d="M334 166h8v10h-8z" fill="#1f2937" />
+      <circle cx="344" cy="168" r="2" fill="#1f2937" />
+      <path d="M338 176c2 0 9 2 12 5v1l-18 4c0-3 1-9 6-10Z" fill="#1f2937" />
+      <path d="M382 248l18-18 34 16-18 18-34-16Z" fill="#4caf4f" opacity="0.95" />
+      <path d="M366 240l22 10" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="376" cy="242" r="3" fill="#ffffff" />
+      <path d="M336 328h56" stroke="#1f2937" strokeWidth="8" strokeLinecap="round" />
     </svg>
   );
 }
 
 function ClientLogo({ variant }: { variant: number }) {
   const logos = [
-    <><path d="M12 2a10 10 0 0 0 0 20h4V12H6V8h10V2h-4Z" /><path d="M18 2a10 10 0 0 1 0 20h-4V12h10V8H14V2h4Z" /></>,
-    <><path d="m2 13 11-9 11 9-3 2-8-5-8 5-3-2Z" /><path d="m5 15 8 5 8-5-2 5H7l-2-5Z" /></>,
-    <><path d="M3 7h16l3 4-3 7H3l2-7-2-4Zm5 3-1 5h4l2-5H8Zm7 0-2 5h4l1-5h-3Z" /></>,
-    <text x="1" y="17" fontSize="10" fontWeight="800" fontStyle="italic">LOGO</text>,
-    <><path d="M2 12c0-6 6-9 11-9s11 3 11 9-6 9-11 9S2 18 2 12Z" stroke="currentColor" strokeWidth="2" fill="none" /><path d="M6 12c0-3 3-5 7-5s7 2 7 5-3 5-7 5-7-2-7-5Z" stroke="currentColor" strokeWidth="2" fill="none" /></>,
-    <path d="m3 16 7-8 4 4 7-7 3 3-10 10-4-4-5 5-2-3Z" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />,
-    <><path d="M3 7h16l3 4-3 7H3l2-7-2-4Zm5 3-1 5h4l2-5H8Zm7 0-2 5h4l1-5h-3Z" /></>,
+    "Logo 2.png",
+    "Vector (1).png",
+    "Logo (2).png",
+    "Logo (3).png",
+    "Logo (4).png",
+    "Logo (5).png",
+    "Logo (2).png",
   ];
-  return <svg viewBox="0 0 26 24" className={`h-9 w-10 ${variant === 0 ? "text-[#5648c7]" : variant === 3 ? "text-[#3d4785]" : "text-[#263238]"}`} fill="currentColor">{logos[variant]}</svg>;
+
+  return (
+    <Image
+      src={`/images/${encodeURIComponent(logos[variant])}`}
+      alt={`Client logo ${variant + 1}`}
+      width={80}
+      height={48}
+      className="h-9 w-10 object-contain"
+    />
+  );
 }
 
 function CommunityIcon({ type }: { type: "members" | "association" | "clubs" }) {
@@ -137,12 +156,16 @@ export default function Home() {
         aria-label="Main navigation"
         className="mx-auto flex h-[76px] max-w-[1200px] items-center justify-between px-6 lg:px-0"
       >
-        <Link href="/" className="flex items-center gap-2" aria-label="Nexcent home">
-          <NexcentMark />
-          <span className="text-[28px] font-bold leading-none tracking-[-0.7px] text-[#263238]">
-            Nexcent
-          </span>
-        </Link>
+        <Link href="/" aria-label="Nexcent home">
+  <Image
+    src="/images/Logo%20(1).png"
+    alt="Nexcent"
+    width={150}
+    height={50}
+    priority
+    className="h-auto w-[150px] object-contain"
+  />
+</Link>
 
         <div className="hidden items-center gap-[50px] text-[15px] font-normal text-[#18191f] md:flex">
           {navigation.map((item) => (
@@ -173,7 +196,16 @@ export default function Home() {
           <p className="mt-5 text-[15px] text-[#717171]">Where to grow your business as a photographer: site or social media?</p>
           <Link href="#register" className="mt-8 inline-flex rounded bg-[#4caf4f] px-8 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-[#429d45]">Register</Link>
         </section>
-        <div className="justify-self-center lg:justify-self-end"><HeroIllustration /></div>
+        <div className="justify-self-center lg:justify-self-end">
+           <Image
+    src="/images/Illustration.png"
+    alt="Developer working with technology"
+    width={500}
+    height={500}
+    priority
+    className="h-auto w-full max-w-[500px] object-contain"
+  />
+        </div>
         <div className="col-span-full flex justify-center gap-2 self-end"><span className="h-2.5 w-2.5 rounded-full bg-[#4caf4f]" /><span className="h-2.5 w-2.5 rounded-full bg-[#4caf4f]/40" /><span className="h-2.5 w-2.5 rounded-full bg-[#4caf4f]/30" /></div>
       </main>
       <section className="bg-white pb-20 pt-11">
@@ -184,6 +216,7 @@ export default function Home() {
           </div>
           <div className="mt-12 grid grid-cols-4 items-center justify-items-center gap-8 sm:grid-cols-7">
             {[0, 1, 2, 3, 4, 5, 6].map((logo) => <ClientLogo key={logo} variant={logo} />)}
+
           </div>
           <div className="mt-[72px] text-center">
             <h2 className="mx-auto max-w-[650px] text-[32px] font-semibold leading-[1.35] tracking-[-.6px] text-[#4d4d4d]">Manage your entire community<br />in a single system</h2>

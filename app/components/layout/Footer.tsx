@@ -88,9 +88,13 @@ function LogoIcon() {
   return (
     <div className="flex items-center justify-center rounded-full bg-[#4caf4f] p-2 text-white shadow-[0_12px_30px_rgba(76,175,79,0.25)]">
       <svg viewBox="0 0 34 24" className="h-6 w-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h10.8L5.4 9.4 0 0Z" fill="#fff" />
-        <path d="M11.7 0h10.8l-5.4 9.4L11.7 0Z" fill="#fff" />
-        <path d="M5.85 10.2h10.8l-5.4 9.35-5.4-9.35Z" fill="#fff" />
+        <path d="M0 0h10.8L5.4 9.4 0 0Z" fill="#ffffff" />
+        <path d="M11.7 0h10.8l-5.4 9.4L11.7 0Z" fill="#ffffff" />
+        <path d="M5.85 10.2h10.8l-5.4 9.35-5.4-9.35Z" fill="#ffffff" opacity="0.65" />
+        <path d="m11.7 19.95 5.4-9.35 5.4 9.35H11.7Z" fill="#ffffff" opacity="0.65" />
+        <path d="M23.2 0H34l-5.4 9.4L23.2 0Z" fill="#16383d" />
+        <path d="m23.2 19.95 5.4-9.35 5.4 9.35H23.2Z" fill="#16383d" />
+        <path d="M5.4 10.2h11.7l-5.85 10.1L5.4 10.2Z" stroke="#ffffff" strokeWidth=".6" />
       </svg>
     </div>
   );
