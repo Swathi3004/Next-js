@@ -95,41 +95,37 @@ function ClientLogo({ variant }: { variant: number }) {
 }
 
 function CommunityIcon({ type }: { type: "members" | "association" | "clubs" }) {
-  const paths = {
-    members: <><circle cx="15" cy="11" r="4" /><circle cx="25" cy="9" r="4" /><circle cx="34" cy="12" r="4" /><path d="M7 27c0-6 4-10 8-10s8 4 8 10M19 27c0-7 4-11 9-11s9 4 9 11M29 27c0-5 3-9 7-9s7 4 7 9" /></>,
-    association: <><path d="M17 29h22M19 29V8l12-6v27M25 11h2m-2 5h2m-2 5h2m5-10h2m-2 5h2m-2 5h2M9 29V17h10v12M12 21h4m-4 4h4" /></>,
-    clubs: <><path d="M19 5v11l-5 3V9l5-4Zm13 0v11l5 3V9l-5-4ZM9 28c1-6 4-9 8-9s7 3 8 9M25 28c1-6 4-9 8-9s7 3 8 9M11 23l-4-2v-7l4 2v7Zm28 0 4-2v-7l-4 2v7Z" /></>,
+  const iconMap = {
+    members: "Icon.png",
+    association: "Icon (1).png",
+    clubs: "Icon (2).png",
   };
-  return <div className="flex h-12 w-14 items-center justify-center rounded-br-xl rounded-tl-xl bg-[#e8f5e9]"><svg viewBox="0 0 50 34" className="h-9 w-11 stroke-[#1b5e20]" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">{paths[type]}</svg></div>;
+  return <div className="flex h-12 w-14 items-center justify-center rounded-br-xl rounded-tl-xl bg-[#e8f5e9]"><Image src={`/images/${encodeURIComponent(iconMap[type])}`} alt={`${type} icon`} width={44} height={48} className="h-9 w-11 object-contain" /></div>;
 }
 
-function FeatureIllustration() {
-  return <svg aria-label="People using a membership terminal" className="h-auto w-full max-w-[360px]" viewBox="0 0 360 330" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="171" cy="303" rx="148" ry="10" fill="#F1F3F4" />
-    <path d="M148 30h108l-7 219H140l8-219Z" fill="#4CAF4F" /><path d="M142 34h108l-8 215H134l8-215Z" fill="#B9E3BB" />
-    <path d="M145 39h97l-8 94h-93l4-94Z" fill="#E8F5E9" /><circle cx="190" cy="75" r="23" fill="#4CAF4F" /><circle cx="190" cy="67" r="9" fill="white" /><path d="M173 94c3-12 30-12 34 0-9 12-25 12-34 0Z" fill="white" />
-    <path d="M139 137h94v16h-94z" fill="white" /><circle cx="151" cy="145" r="3" fill="#263238" /><circle cx="163" cy="145" r="3" fill="#263238" /><circle cx="175" cy="145" r="3" fill="#263238" />
-    <path d="M138 165h91v18h-91z" fill="white" /><path d="M142 183h86v9h-86z" fill="#4CAF4F" /><path d="M141 202h84v18h-84z" fill="white" /><circle cx="152" cy="211" r="3" fill="#263238" /><circle cx="164" cy="211" r="3" fill="#263238" /><circle cx="176" cy="211" r="3" fill="#263238" /><circle cx="188" cy="211" r="3" fill="#263238" />
-    <path d="M150 230h58v19h-58z" fill="#8DD293" /><path d="M154 234h49v11h-49z" fill="#72BF78" />
-    <path d="M75 113c2-13 17-19 28-11l2 17-11 9-19-15Z" fill="#263238" /><circle cx="91" cy="120" r="13" fill="#F3A38D" /><path d="M78 117c-4-11 15-20 24-10l-6 8-9-5-9 7Z" fill="#263238" />
-    <path d="m80 135 20 2 13 52-25 9-17-48 9-15Z" fill="#4CAF4F" /><path d="M81 148 66 175l-9-4 11-31 13 8Z" fill="#F3A38D" /><path d="m58 168-9 17c-5 9 6 14 11 6l10-17-12-6Z" fill="#F3A38D" />
-    <path d="m87 194 18-8 24 59-15 11-27-62Z" fill="#1B4D2B" /><path d="m108 252 16-8 19 23-10 9-25-24Z" fill="#1B4D2B" /><path d="m129 274 17-9 7 6-15 10-9-7Z" fill="#263238" />
-    <path d="m86 194 13 2-5 60-14 1 6-63Z" fill="#153E25" /><path d="m80 254 15 1 1 21-17 1 1-22Z" fill="#153E25" /><path d="m78 275 19 1 3 7-21 2-1-10Z" fill="#4CAF4F" />
-    <path d="M267 64c0-12 16-18 26-10l-3 16-15 7-8-13Z" fill="#263238" /><circle cx="280" cy="78" r="13" fill="#F3A38D" /><path d="M268 75c1-13 19-17 26-8l-3 7-10-2-4 7-9-4Z" fill="#263238" />
-    <path d="m274 93 22 4 14 18-14 9-14-13-5 34-27-7 14-45Z" fill="#4CAF4F" /><path d="m295 101 20 15 10-16 8 5-12 28c-3 7-10 8-15 3l-20-17 9-18Z" fill="#F3A38D" />
-    <path d="m267 137 23 5-5 72-18 1v-78Z" fill="#42AC49" /><path d="m285 141 13-5 17 78-17 1-13-74Z" fill="#4CAF4F" /><path d="m267 212 19 1-2 37-17 4v-42Zm31 1 18-1 9 35-16 5-11-39Z" fill="#42AC49" /><path d="m265 249 21-1 4 7-25 4v-10Zm43-1 19-6 7 7-22 8-4-9Z" fill="#263238" />
-    <path d="m259 118-31 18 6 12 36-18-11-12Z" fill="#F3A38D" /><path d="m231 135-10 6 8 11 10-6-8-11Z" fill="#4CAF4F" /><path d="M255 89h8v17h-8z" fill="#4CAF4F" />
-  </svg>;
-}
 
-function StatIcon({ type }: { type: "members" | "clubs" | "events" | "payments" }) {
-  const art = {
-    members: <><circle cx="13" cy="11" r="6" /><circle cx="26" cy="12" r="6" /><path d="M2 29c1-8 6-12 12-12s11 4 12 12M17 27c2-6 7-9 12-9s10 3 12 9" /></>,
-    clubs: <><path d="M20 3v16l-8 5V8l8-5Zm0 16 8 5V8l-8-5ZM6 34c1-7 5-11 10-11s9 4 10 11m-5-1c1-6 5-10 10-10s9 4 10 10M5 22l-4-3v-8l5 3v8l-1 0Zm30 0 5-3v-8l-5 3v8Z" /></>,
-    events: <><path d="M6 29v-7h7v7m-7-7 4-5m3 5 3-6m4 13v-9h7v9m-7-9 4-6m3 6 3-4M2 32h38" /><path d="M12 9V2m12 5V0" /></>,
-    payments: <><rect x="2" y="6" width="38" height="27" rx="5" /><path d="M2 14h38M29 26h6" /></>,
+
+function StatIcon({
+  type,
+}: {
+  type: "members" | "clubs" | "events" | "payments";
+}) {
+  const icons = {
+    members: "Icon (3).png",
+    clubs: "Icon (4).png",
+    events: "Icon (5).png",
+    payments: "Icon (6).png",
   };
-  return <svg viewBox="0 0 42 36" className="h-10 w-12 shrink-0 stroke-[#4caf4f]" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{art[type]}</svg>;
+
+  return (
+    <Image
+      src={`/images/${encodeURIComponent(icons[type])}`}
+      alt={`${type} icon`}
+      width={48}
+      height={48}
+      className="h-10 w-12 shrink-0 object-contain"
+    />
+  );
 }
 
 function FooterDesignIllustration() {
@@ -188,9 +184,9 @@ export default function Home() {
         </div>
       </nav>
       </header>
-      <main className="mx-auto grid min-h-[565px] max-w-[1200px] items-center gap-10 px-6 pb-12 pt-8 lg:grid-cols-[1fr_440px] lg:px-0 lg:pt-0">
+      <main className="mx-auto grid min-h-[565px] max-w-[1200px] items-center gap-8 px-6 pb-12 pt-8 md:gap-10 lg:grid-cols-[1fr_440px] lg:px-0 lg:pt-0">
         <section className="pt-4 lg:pt-0">
-          <h1 className="max-w-[680px] text-[48px] font-semibold leading-[1.18] tracking-[-1.2px] text-[#4d4d4d] sm:text-[56px] lg:text-[64px]">
+          <h1 className="max-w-[680px] text-[32px] font-semibold leading-[1.18] tracking-[-1.2px] text-[#4d4d4d] sm:text-[48px] lg:text-[64px]">
             Lessons and insights <span className="block text-[#4caf4f]">from 8 years</span>
           </h1>
           <p className="mt-5 text-[15px] text-[#717171]">Where to grow your business as a photographer: site or social media?</p>
@@ -211,15 +207,15 @@ export default function Home() {
       <section className="bg-white pb-20 pt-11">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-0">
           <div className="text-center">
-            <h2 className="text-[32px] font-semibold leading-tight tracking-[-.6px] text-[#4d4d4d]">Our Clients</h2>
+            <h2 className="text-[24px] font-semibold leading-tight tracking-[-.6px] text-[#4d4d4d] sm:text-[28px] md:text-[32px]">Our Clients</h2>
             <p className="mt-2 text-[16px] text-[#717171]">We have been working with some Fortune 500+ clients</p>
           </div>
-          <div className="mt-12 grid grid-cols-4 items-center justify-items-center gap-8 sm:grid-cols-7">
+          <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7">
             {[0, 1, 2, 3, 4, 5, 6].map((logo) => <ClientLogo key={logo} variant={logo} />)}
 
           </div>
           <div className="mt-[72px] text-center">
-            <h2 className="mx-auto max-w-[650px] text-[32px] font-semibold leading-[1.35] tracking-[-.6px] text-[#4d4d4d]">Manage your entire community<br />in a single system</h2>
+            <h2 className="mx-auto max-w-[650px] text-[20px] font-semibold leading-[1.35] tracking-[-.6px] text-[#4d4d4d] sm:text-[24px] md:text-[28px] lg:text-[32px]">Manage your entire community<br />in a single system</h2>
             <p className="mt-2 text-[16px] text-[#717171]">Who is Nexcent suitable for?</p>
           </div>
           <div className="mt-10 grid gap-8 md:grid-cols-3 md:gap-[126px]">
@@ -227,10 +223,18 @@ export default function Home() {
             <CommunityCard icon="association" title={<>National<br />Associations</>} />
             <CommunityCard icon="clubs" title={<>Clubs And<br />Groups</>} />
           </div>
-          <div className="mt-24 grid items-center gap-14 pb-10 lg:grid-cols-[400px_1fr] lg:gap-[92px]">
-            <div className="justify-self-center"><FeatureIllustration /></div>
+          <div className="mt-12 grid items-center gap-8 pb-10 md:mt-24 md:gap-14 lg:grid-cols-[400px_1fr] lg:gap-[92px]">
+            <div className="justify-self-center">
+  <Image
+    src="/images/Frame%2035.png"
+    alt="People using a membership system"
+    width={360}
+    height={330}
+    className="h-auto w-full max-w-[360px] object-contain"
+  />
+</div>
             <div className="max-w-[670px]">
-              <h2 className="text-[36px] font-semibold leading-[1.25] tracking-[-.8px] text-[#4d4d4d]">The unseen of spending three<br className="hidden lg:block" /> years at Pixelgrade</h2>
+              <h2 className="text-[20px] font-semibold leading-[1.25] tracking-[-.8px] text-[#4d4d4d] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px]">The unseen of spending three<br className="hidden lg:block" /> years at Pixelgrade</h2>
               <p className="mt-4 text-[14px] leading-5 text-[#717171]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.</p>
               <Link href="#learn-more" className="mt-8 inline-flex rounded bg-[#4caf4f] px-8 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-[#429d45]">Learn More</Link>
             </div>
@@ -238,12 +242,12 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-[#f5f7fa]">
-        <div className="mx-auto grid min-h-[288px] max-w-[1075px] items-center gap-12 px-6 py-12 lg:grid-cols-[1fr_1.05fr] lg:px-0">
+        <div className="mx-auto grid min-h-[288px] max-w-[1075px] items-center gap-8 px-6 py-12 md:gap-12 lg:grid-cols-[1fr_1.05fr] lg:px-0">
           <div>
-            <h2 className="text-[36px] font-semibold leading-[1.25] tracking-[-.8px] text-[#4d4d4d]">Helping a local<br /><span className="text-[#4caf4f]">business reinvent itself</span></h2>
+            <h2 className="text-[22px] font-semibold leading-[1.25] tracking-[-.8px] text-[#4d4d4d] sm:text-[26px] md:text-[30px] lg:text-[36px]">Helping a local<br /><span className="text-[#4caf4f]">business reinvent itself</span></h2>
             <p className="mt-3 text-[16px] text-[#18191f]">We reached here with our hard work and dedication</p>
           </div>
-          <div className="grid grid-cols-2 gap-x-12 gap-y-9">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-x-12 md:gap-y-9">
             <StatItem icon="members" value="2,245,341" label="Members" />
             <StatItem icon="clubs" value="46,328" label="Clubs" />
             <StatItem icon="events" value="828,867" label="Event Bookings" />
@@ -252,18 +256,32 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-white">
-        <div className="mx-auto grid min-h-[530px] max-w-[980px] items-center gap-16 px-6 py-14 lg:grid-cols-[370px_1fr] lg:px-0">
-          <div className="justify-self-center"><FooterDesignIllustration /></div>
+        <div className="mx-auto grid min-h-[530px] max-w-[980px] items-center gap-8 px-6 py-14 md:gap-16 lg:grid-cols-[370px_1fr] lg:px-0">
+          <div className="justify-self-center">
+  <Image
+    src="/images/pana.png"
+    alt="Person designing a mobile sign-up screen"
+    width={350}
+    height={380}
+    className="h-auto w-full max-w-[350px] object-contain"
+  />
+</div>
           <div className="max-w-[600px]">
-            <h2 className="text-[36px] font-semibold leading-[1.24] tracking-[-.8px] text-[#4d4d4d]">How to design your site footer like we did</h2>
+            <h2 className="text-[22px] font-semibold leading-[1.24] tracking-[-.8px] text-[#4d4d4d] sm:text-[26px] md:text-[30px] lg:text-[36px]">How to design your site footer like we did</h2>
             <p className="mt-4 text-[14px] leading-5 text-[#717171]">Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
             <Link href="#learn-more" className="mt-8 inline-flex rounded bg-[#4caf4f] px-8 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-[#429d45]">Learn More</Link>
           </div>
         </div>
       </section>
       <section className="bg-[#f5f7fa]">
-        <div className="mx-auto grid min-h-[392px] max-w-[1085px] items-center gap-16 px-6 py-8 lg:grid-cols-[326px_1fr] lg:px-0">
-          <Image src="/images/customer-tile.png" alt="Electric vehicle app icon" width={326} height={326} className="h-[326px] w-[326px] rounded-lg object-cover" />
+        <div className="mx-auto grid min-h-[392px] max-w-[1085px] items-center gap-8 px-6 py-8 md:gap-16 lg:grid-cols-[326px_1fr] lg:px-0">
+          <Image
+  src="/images/T%20icon.jpg"
+  alt="Tesla customer icon"
+  width={326}
+  height={326}
+  className="h-[326px] w-[326px] rounded-lg object-cover"
+/>
           <div className="max-w-[750px]">
             <p className="text-[16px] leading-[24px] text-[#717171]">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique purus malesuada. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
             <h3 className="mt-5 text-[20px] font-semibold text-[#4caf4f]">Tim Smith</h3>
@@ -276,19 +294,65 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-white py-12">
-        <div className="mx-auto max-w-[1075px] px-6 text-center lg:px-0">
-          <h2 className="text-[36px] font-semibold leading-tight tracking-[-.8px] text-[#4d4d4d]">Caring is the new marketing</h2>
-          <p className="mx-auto mt-3 max-w-[620px] text-[16px] leading-6 text-[#717171]">The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who&apos;s joining the community, read about how our community are increasing their membership income and lot&apos;s more.</p>
-          <div className="mt-4 grid gap-8 md:grid-cols-3 md:gap-6">
-            <BlogCard image="/images/blog-one.png" title={<>Creating Streamlined<br />Safeguarding Processes with<br />OneRen</>} />
-            <BlogCard image="/images/blog-two.png" title={<>What are your safeguarding<br />responsibilities and how can<br />you manage them?</>} />
-            <BlogCard image="/images/blog-three.png" title={<>Revamping the Membership<br />Model with Triathlon<br />Australia</>} />
-          </div>
-        </div>
-      </section>
+  <div className="mx-auto max-w-[1080px] px-6 text-center lg:px-0">
+
+    <h2 className="text-[24px] font-semibold leading-tight tracking-[-0.8px] text-[#4d4d4d] sm:text-[28px] md:text-[32px] lg:text-[36px]">
+      Caring is the new marketing
+    </h2>
+
+    <p className="mx-auto mt-3 max-w-[650px] text-[14px] leading-[20px] text-[#717171]">
+      The Nexcent blog is the best place to read about the latest membership insights,
+      trends and more. See who&apos;s joining the community, read about how our community
+      are increasing their membership income and lot&apos;s more.
+    </p>
+
+    <div className="mt-7 grid gap-8 md:grid-cols-3 md:gap-5">
+      
+      <BlogCard
+        image="/images/image%201.jpg"
+        title={
+          <>
+            Creating Streamlined
+            <br />
+            Safeguarding Processes with
+            <br />
+            OneRen
+          </>
+        }
+      />
+
+      <BlogCard
+        image="/images/image%202.jpg"
+        title={
+          <>
+            What are your safeguarding
+            <br />
+            responsibilities and how can
+            <br />
+            you manage them?
+          </>
+        }
+      />
+
+      <BlogCard
+        image="/images/image%203.jpg"
+        title={
+          <>
+            Revamping the Membership
+            <br />
+            Model with Triathlon
+            <br />
+            Australia
+          </>
+        }
+      />
+
+    </div>
+  </div>
+</section>
       <section className="bg-[#f5f7fa] py-10 sm:py-12">
         <div className="mx-auto flex min-h-[260px] max-w-[760px] flex-col items-center justify-center px-6 text-center">
-          <h2 className="text-[46px] font-semibold leading-[1.18] tracking-[-1.2px] text-[#263238] sm:text-[56px] lg:text-[64px]">Pellentesque suscipit<br />fringilla libero eu.</h2>
+          <h2 className="text-[28px] font-semibold leading-[1.18] tracking-[-1.2px] text-[#263238] sm:text-[40px] md:text-[48px] lg:text-[64px]">Pellentesque suscipit<br />fringilla libero eu.</h2>
           <Link href="#demo" className="mt-8 inline-flex items-center gap-3 rounded bg-[#4caf4f] px-8 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-[#429d45]">Get a Demo <span aria-hidden="true" className="text-lg font-normal">→</span></Link>
         </div>
       </section>
@@ -309,12 +373,61 @@ function StatItem({ icon, value, label }: { icon: "members" | "clubs" | "events"
   return <div className="flex items-center gap-3"><StatIcon type={icon} /><div><p className="text-[28px] font-bold leading-8 tracking-[-.4px] text-[#4d4d4d]">{value}</p><p className="mt-1 text-[16px] leading-4 text-[#717171]">{label}</p></div></div>;
 }
 
-function BlogCard({ image, title }: { image: string; title: React.ReactNode }) {
-  return <article className="flex flex-col items-center">
-    <Image src={image} alt="Nexcent blog article" width={352} height={286} className="h-[286px] w-full rounded-lg object-cover" />
-    <div className="-mt-24 flex min-h-[176px] w-[calc(100%-48px)] flex-col items-center rounded-lg bg-[#f5f7fa] px-5 py-4 shadow-[0_8px_16px_rgba(171,190,209,0.35)]">
-      <h3 className="text-[20px] font-semibold leading-7 text-[#717171]">{title}</h3>
-      <Link href="#read-more" className="mt-auto pt-3 text-[20px] font-semibold text-[#4caf4f]">Readmore <span aria-hidden="true" className="ml-2 font-normal">→</span></Link>
-    </div>
-  </article>;
+function BlogCard({
+  image,
+  title,
+}: {
+  image: string;
+  title: React.ReactNode;
+}) {
+  return (
+    <article className="flex flex-col items-center">
+
+      {/* Blog Image */}
+      <Image
+        src={image}
+        alt="Nexcent blog article"
+        width={350}
+        height={220}
+        className="h-[220px] w-full rounded-lg object-cover"
+      />
+
+      {/* Floating Content Card */}
+      <div
+        className="
+          relative
+          -mt-[62px]
+          flex
+          min-h-[125px]
+          w-[calc(100%-24px)]
+          flex-col
+          items-center
+          rounded-lg
+          bg-[#f5f7fa]
+          px-4
+          py-4
+          shadow-[0_8px_16px_rgba(171,190,209,0.35)]
+        "
+      >
+        <h3 className="text-[15px] font-semibold leading-[20px] text-[#717171]">
+          {title}
+        </h3>
+
+        <Link
+          href="#read-more"
+          className="
+            mt-auto
+            pt-3
+            text-[15px]
+            font-semibold
+            text-[#4caf4f]
+          "
+        >
+          Readmore
+          <span className="ml-2 font-normal">→</span>
+        </Link>
+      </div>
+
+    </article>
+  );
 }
